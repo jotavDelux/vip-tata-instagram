@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso Exclusivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background: radial-gradient(circle at center, #400000 0%, #0a0000 50%, #000 100%);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      z-index: 2;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.25) 0%, transparent 80%);
+      filter: blur(80px);
+      animation: glowBackground 6s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: clamp(16px, 4.5vw, 20px);
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
+      line-height: 1.5;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .btn {
+      position: relative;
+      background: linear-gradient(90deg, #b00000, #ff1a1a);
+      color: #fff;
+      padding: 16px 45px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      z-index: 1;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.35) 0%, transparent 80%);
+      animation: pulse 3s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 45px rgba(255, 0, 0, 0.9);
+    }
+
+    p {
+      color: #bbb;
+      font-size: 13px;
+      opacity: 0.85;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+      100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes glowBackground {
+      0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+      100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '649202084843251');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=649202084843251&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>VOCÊ ESTÁ SENDO REDIRECIONADO<br>PARA UM AMBIENTE PRIVADO.</h1>
+    <a class="btn" href="https://t.me/vipdatatabot?start=instagram"><span>Acessar Agora</span></a>
+    <p>Concedendo acesso...</p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://t.me/vipdatatabot?start=instagram";
+    }, 3000);
+  </script>
+
+</body>
+</html>
