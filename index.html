@@ -1,161 +1,162 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<!DOCTYPE html><html lang="pt-BR"><head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acesso Exclusivo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Thamiris Ferreira ❤️‍🔥</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: radial-gradient(circle at center, #400000 0%, #0a0000 50%, #000 100%);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      justify-content: center;
+      background: #f9a8d4; background-image: radial-gradient(circle, #f472b6 1.5px, transparent 1.5px); background-size: 24px 24px;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 24px;
+      padding: 40px 32px 32px;
       text-align: center;
-      overflow: hidden;
-      position: relative;
+      width: 320px;
+      max-width: 90vw;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     }
-
-    .container {
+    .photo-wrapper {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #ec4899, #f43f5e, #ef4444);
+    }
+    .photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid white;
+    }
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 25px;
-      z-index: 2;
-      padding: 0 20px;
-      position: relative;
+      gap: 2px;
     }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 650px;
-      height: 650px;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.25) 0%, transparent 80%);
-      filter: blur(80px);
-      animation: glowBackground 6s ease-in-out infinite alternate;
-      z-index: 0;
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
     }
-
-    h1 {
-      font-size: clamp(16px, 4.5vw, 20px);
-      font-weight: 600;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-      text-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
-      line-height: 1.5;
-      margin: 0;
-      animation: fadeIn 1s ease-in-out;
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
     }
-
-    .btn {
-      position: relative;
-      background: linear-gradient(90deg, #b00000, #ff1a1a);
-      color: #fff;
-      padding: 16px 45px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
-      transition: all 0.3s ease;
-      z-index: 1;
-      overflow: hidden;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.35) 0%, transparent 80%);
-      animation: pulse 3s ease-in-out infinite;
-      z-index: 0;
-    }
-
-    .btn span {
-      position: relative;
-      z-index: 2;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 45px rgba(255, 0, 0, 0.9);
-    }
-
-    p {
-      color: #bbb;
-      font-size: 13px;
-      opacity: 0.85;
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-
     @keyframes pulse {
-      0% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
-      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
-      100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
     }
-
-    @keyframes glowBackground {
-      0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-      100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+    .status-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #22c55e;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .response-time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 24px;
+      background: #0088cc;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      opacity: 1;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,136,204,0.3);
+    }
+    .cta-btn:not(:disabled):hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,136,204,0.4);
+    }
+    .cta-btn:not(:disabled):active {
+      transform: translateY(0);
+    }
+    .btn-spinner {
+      display: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .telegram-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
     }
   </style>
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '649202084843251');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=649202084843251&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-
+  
 </head>
-
 <body>
-  <div class="container">
-    <h1>VOCÊ ESTÁ SENDO REDIRECIONADO<br>PARA UM AMBIENTE PRIVADO.</h1>
-    <a class="btn" href="https://t.me/vipdatatabot?start=instagram"><span>Acessar Agora</span></a>
-    <p>Concedendo acesso...</p>
+  <div class="card">
+    <div class="photo-wrapper">
+      <div class="photo-inner">
+        <img src="images/1192366c-7df8-4ccf-b064-b7ada273525e.png" alt="Thamiris Ferreira❤️‍🔥" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+      </div>
+    </div>
+    <div class="name">
+      <span>Thamiris Ferreira❤️‍🔥</span> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" style="display:inline-block;vertical-align:middle;margin-left:4px;"><circle cx="11" cy="11" r="11" fill="#0088cc"></circle><path d="M6.5 11.5L9.5 14.5L15.5 8.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+    </div>
+    <div class="status">
+      <div class="status-dot"></div>
+      <span class="status-text">Online</span>
+    </div>
+    <div class="response-time">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Tempo médio de resposta: 14 segundos
+    </div>
+    <button id="cta-btn" class="cta-btn">
+      <svg class="telegram-icon" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+      <span id="btn-spinner" class="btn-spinner"></span>
+      <span id="btn-text">ACESSAR TELEGRAM</span>
+    </button>
   </div>
-
+  
   <script>
-    setTimeout(function() {
-      window.location.href = "https://t.me/vipdatatabot?start=instagram";
-    }, 3000);
+    document.getElementById('cta-btn').addEventListener('click', function() {
+      window.location.href = 'https://t.me/vipdatatabot?start=start';
+    });
   </script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" data-cf-beacon="{" version":"2024.11.0","token":"f8ed2153402248e9a31cc4e995b1ced0","server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
 
-</body>
-</html>
+</body></html>
